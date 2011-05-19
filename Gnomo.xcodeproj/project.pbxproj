@@ -1,0 +1,283 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1ACBD1013855C80003D2BF2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1ACBD0F13855C80003D2BF2 /* UIKit.framework */; };
+		A1ACBD1213855C80003D2BF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1ACBD1113855C80003D2BF2 /* Foundation.framework */; };
+		A1ACBD1413855C80003D2BF2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1ACBD1313855C80003D2BF2 /* CoreGraphics.framework */; };
+		A1ACBD1A13855C80003D2BF2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1ACBD1813855C80003D2BF2 /* InfoPlist.strings */; };
+		A1ACBD1D13855C80003D2BF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1ACBD1C13855C80003D2BF2 /* main.m */; };
+		A1ACBD2013855C80003D2BF2 /* GnomoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1ACBD1F13855C80003D2BF2 /* GnomoAppDelegate.m */; };
+		A1ACBD2313855C80003D2BF2 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1ACBD2113855C80003D2BF2 /* MainWindow.xib */; };
+		A1ACBD2613855C80003D2BF2 /* GnomoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1ACBD2513855C80003D2BF2 /* GnomoViewController.m */; };
+		A1ACBD2913855C80003D2BF2 /* GnomoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1ACBD2713855C80003D2BF2 /* GnomoViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A1ACBD0B13855C80003D2BF2 /* Gnomo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gnomo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1ACBD0F13855C80003D2BF2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A1ACBD1113855C80003D2BF2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A1ACBD1313855C80003D2BF2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A1ACBD1713855C80003D2BF2 /* Gnomo-Info.plist */ = {isa = PBXFileReference; path = "Gnomo-Info.plist"; sourceTree = "<group>"; };
+		A1ACBD1913855C80003D2BF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A1ACBD1B13855C80003D2BF2 /* Gnomo-Prefix.pch */ = {isa = PBXFileReference; path = "Gnomo-Prefix.pch"; sourceTree = "<group>"; };
+		A1ACBD1C13855C80003D2BF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A1ACBD1E13855C80003D2BF2 /* GnomoAppDelegate.h */ = {isa = PBXFileReference; path = GnomoAppDelegate.h; sourceTree = "<group>"; };
+		A1ACBD1F13855C80003D2BF2 /* GnomoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GnomoAppDelegate.m; sourceTree = "<group>"; };
+		A1ACBD2213855C80003D2BF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		A1ACBD2413855C80003D2BF2 /* GnomoViewController.h */ = {isa = PBXFileReference; path = GnomoViewController.h; sourceTree = "<group>"; };
+		A1ACBD2513855C80003D2BF2 /* GnomoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GnomoViewController.m; sourceTree = "<group>"; };
+		A1ACBD2813855C80003D2BF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GnomoViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1ACBD0813855C80003D2BF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1ACBD1013855C80003D2BF2 /* UIKit.framework in Frameworks */,
+				A1ACBD1213855C80003D2BF2 /* Foundation.framework in Frameworks */,
+				A1ACBD1413855C80003D2BF2 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1ACBD0013855C80003D2BF2 = {
+			isa = PBXGroup;
+			children = (
+				A1ACBD1513855C80003D2BF2 /* Gnomo */,
+				A1ACBD0E13855C80003D2BF2 /* Frameworks */,
+				A1ACBD0C13855C80003D2BF2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A1ACBD0C13855C80003D2BF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1ACBD0B13855C80003D2BF2 /* Gnomo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1ACBD0E13855C80003D2BF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1ACBD0F13855C80003D2BF2 /* UIKit.framework */,
+				A1ACBD1113855C80003D2BF2 /* Foundation.framework */,
+				A1ACBD1313855C80003D2BF2 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A1ACBD1513855C80003D2BF2 /* Gnomo */ = {
+			isa = PBXGroup;
+			children = (
+				A1ACBD1E13855C80003D2BF2 /* GnomoAppDelegate.h */,
+				A1ACBD1F13855C80003D2BF2 /* GnomoAppDelegate.m */,
+				A1ACBD2113855C80003D2BF2 /* MainWindow.xib */,
+				A1ACBD2413855C80003D2BF2 /* GnomoViewController.h */,
+				A1ACBD2513855C80003D2BF2 /* GnomoViewController.m */,
+				A1ACBD2713855C80003D2BF2 /* GnomoViewController.xib */,
+				A1ACBD1613855C80003D2BF2 /* Supporting Files */,
+			);
+			path = Gnomo;
+			sourceTree = "<group>";
+		};
+		A1ACBD1613855C80003D2BF2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1ACBD1713855C80003D2BF2 /* Gnomo-Info.plist */,
+				A1ACBD1813855C80003D2BF2 /* InfoPlist.strings */,
+				A1ACBD1B13855C80003D2BF2 /* Gnomo-Prefix.pch */,
+				A1ACBD1C13855C80003D2BF2 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1ACBD0A13855C80003D2BF2 /* Gnomo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1ACBD2C13855C80003D2BF2 /* Build configuration list for PBXNativeTarget "Gnomo" */;
+			buildPhases = (
+				A1ACBD0713855C80003D2BF2 /* Sources */,
+				A1ACBD0813855C80003D2BF2 /* Frameworks */,
+				A1ACBD0913855C80003D2BF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gnomo;
+			productName = Gnomo;
+			productReference = A1ACBD0B13855C80003D2BF2 /* Gnomo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1ACBD0213855C80003D2BF2 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = A1ACBD0513855C80003D2BF2 /* Build configuration list for PBXProject "Gnomo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A1ACBD0013855C80003D2BF2;
+			productRefGroup = A1ACBD0C13855C80003D2BF2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1ACBD0A13855C80003D2BF2 /* Gnomo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1ACBD0913855C80003D2BF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1ACBD1A13855C80003D2BF2 /* InfoPlist.strings in Resources */,
+				A1ACBD2313855C80003D2BF2 /* MainWindow.xib in Resources */,
+				A1ACBD2913855C80003D2BF2 /* GnomoViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1ACBD0713855C80003D2BF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1ACBD1D13855C80003D2BF2 /* main.m in Sources */,
+				A1ACBD2013855C80003D2BF2 /* GnomoAppDelegate.m in Sources */,
+				A1ACBD2613855C80003D2BF2 /* GnomoViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A1ACBD1813855C80003D2BF2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1ACBD1913855C80003D2BF2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A1ACBD2113855C80003D2BF2 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1ACBD2213855C80003D2BF2 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		A1ACBD2713855C80003D2BF2 /* GnomoViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1ACBD2813855C80003D2BF2 /* en */,
+			);
+			name = GnomoViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A1ACBD2A13855C80003D2BF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A1ACBD2B13855C80003D2BF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		A1ACBD2D13855C80003D2BF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Gnomo/Gnomo-Prefix.pch";
+				INFOPLIST_FILE = "Gnomo/Gnomo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A1ACBD2E13855C80003D2BF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Gnomo/Gnomo-Prefix.pch";
+				INFOPLIST_FILE = "Gnomo/Gnomo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1ACBD0513855C80003D2BF2 /* Build configuration list for PBXProject "Gnomo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1ACBD2A13855C80003D2BF2 /* Debug */,
+				A1ACBD2B13855C80003D2BF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1ACBD2C13855C80003D2BF2 /* Build configuration list for PBXNativeTarget "Gnomo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1ACBD2D13855C80003D2BF2 /* Debug */,
+				A1ACBD2E13855C80003D2BF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A1ACBD0213855C80003D2BF2 /* Project object */;
+}
