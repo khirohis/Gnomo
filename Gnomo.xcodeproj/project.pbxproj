@@ -23,14 +23,14 @@
 		A1ACBD0F13855C80003D2BF2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A1ACBD1113855C80003D2BF2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A1ACBD1313855C80003D2BF2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A1ACBD1713855C80003D2BF2 /* Gnomo-Info.plist */ = {isa = PBXFileReference; path = "Gnomo-Info.plist"; sourceTree = "<group>"; };
+		A1ACBD1713855C80003D2BF2 /* Gnomo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Gnomo-Info.plist"; sourceTree = "<group>"; };
 		A1ACBD1913855C80003D2BF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A1ACBD1B13855C80003D2BF2 /* Gnomo-Prefix.pch */ = {isa = PBXFileReference; path = "Gnomo-Prefix.pch"; sourceTree = "<group>"; };
+		A1ACBD1B13855C80003D2BF2 /* Gnomo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gnomo-Prefix.pch"; sourceTree = "<group>"; };
 		A1ACBD1C13855C80003D2BF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A1ACBD1E13855C80003D2BF2 /* GnomoAppDelegate.h */ = {isa = PBXFileReference; path = GnomoAppDelegate.h; sourceTree = "<group>"; };
+		A1ACBD1E13855C80003D2BF2 /* GnomoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GnomoAppDelegate.h; sourceTree = "<group>"; };
 		A1ACBD1F13855C80003D2BF2 /* GnomoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GnomoAppDelegate.m; sourceTree = "<group>"; };
 		A1ACBD2213855C80003D2BF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		A1ACBD2413855C80003D2BF2 /* GnomoViewController.h */ = {isa = PBXFileReference; path = GnomoViewController.h; sourceTree = "<group>"; };
+		A1ACBD2413855C80003D2BF2 /* GnomoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GnomoViewController.h; sourceTree = "<group>"; };
 		A1ACBD2513855C80003D2BF2 /* GnomoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GnomoViewController.m; sourceTree = "<group>"; };
 		A1ACBD2813855C80003D2BF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GnomoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
