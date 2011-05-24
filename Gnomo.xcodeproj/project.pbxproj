@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A6A2F2C138BA54800FBE0D4 /* OverlapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A6A2F29138BA54800FBE0D4 /* OverlapViewController.m */; };
+		8A6A2F2D138BA54800FBE0D4 /* RoundRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A6A2F2B138BA54800FBE0D4 /* RoundRectView.m */; };
 		A1ACBD1013855C80003D2BF2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1ACBD0F13855C80003D2BF2 /* UIKit.framework */; };
 		A1ACBD1213855C80003D2BF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1ACBD1113855C80003D2BF2 /* Foundation.framework */; };
 		A1ACBD1413855C80003D2BF2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1ACBD1313855C80003D2BF2 /* CoreGraphics.framework */; };
@@ -19,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A6A2F28138BA54800FBE0D4 /* OverlapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = OverlapViewController.h; sourceTree = "<group>"; };
+		8A6A2F29138BA54800FBE0D4 /* OverlapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlapViewController.m; sourceTree = "<group>"; };
+		8A6A2F2A138BA54800FBE0D4 /* RoundRectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundRectView.h; sourceTree = "<group>"; };
+		8A6A2F2B138BA54800FBE0D4 /* RoundRectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundRectView.m; sourceTree = "<group>"; };
 		A1ACBD0B13855C80003D2BF2 /* Gnomo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gnomo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1ACBD0F13855C80003D2BF2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A1ACBD1113855C80003D2BF2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -85,6 +91,10 @@
 				A1ACBD2413855C80003D2BF2 /* GnomoViewController.h */,
 				A1ACBD2513855C80003D2BF2 /* GnomoViewController.m */,
 				A1ACBD2713855C80003D2BF2 /* GnomoViewController.xib */,
+				8A6A2F2A138BA54800FBE0D4 /* RoundRectView.h */,
+				8A6A2F2B138BA54800FBE0D4 /* RoundRectView.m */,
+				8A6A2F28138BA54800FBE0D4 /* OverlapViewController.h */,
+				8A6A2F29138BA54800FBE0D4 /* OverlapViewController.m */,
 				A1ACBD1613855C80003D2BF2 /* Supporting Files */,
 			);
 			path = Gnomo;
@@ -164,6 +174,8 @@
 				A1ACBD1D13855C80003D2BF2 /* main.m in Sources */,
 				A1ACBD2013855C80003D2BF2 /* GnomoAppDelegate.m in Sources */,
 				A1ACBD2613855C80003D2BF2 /* GnomoViewController.m in Sources */,
+				8A6A2F2C138BA54800FBE0D4 /* OverlapViewController.m in Sources */,
+				8A6A2F2D138BA54800FBE0D4 /* RoundRectView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +288,7 @@
 				A1ACBD2E13855C80003D2BF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
