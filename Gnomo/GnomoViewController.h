@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GnomoViewController : UIViewController {
-    
+@interface GnomoViewController : UIViewController <UITextViewDelegate> {
+	UITextView			*__tweetText;
+    UIToolbar			*__inputAccessoryToolbar;
+	UIBarButtonItem		*__closeButton;
 }
+
+@property (nonatomic, retain) IBOutlet UITextView *tweetText;
+@property (nonatomic, retain) IBOutlet UIToolbar *inputAccessoryToolber;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *closeButton;
+
+
+- (IBAction)handleCloseButton:(id)sender;
 
 @end
