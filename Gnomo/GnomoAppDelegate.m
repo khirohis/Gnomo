@@ -2,8 +2,8 @@
 //  GnomoAppDelegate.m
 //  Gnomo
 //
-//  Created by 小林 博久 on 11/05/19.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by Hirohisa Kobayasi on 11/05/19.
+//  Copyright 2011 hogelab.net All rights reserved.
 //
 
 #import "GnomoAppDelegate.h"

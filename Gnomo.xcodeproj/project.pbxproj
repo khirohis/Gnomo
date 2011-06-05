@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		8A6A2F2C138BA54800FBE0D4 /* OverlapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A6A2F29138BA54800FBE0D4 /* OverlapViewController.m */; };
 		8A6A2F2D138BA54800FBE0D4 /* RoundRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A6A2F2B138BA54800FBE0D4 /* RoundRectView.m */; };
+		A19532C2139A88FC00E45591 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A19532BA139A88FC00E45591 /* GTMHTTPFetcher.m */; };
+		A19532C3139A88FC00E45591 /* GTMOAuthAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = A19532BC139A88FC00E45591 /* GTMOAuthAuthentication.m */; };
+		A19532C4139A88FC00E45591 /* GTMOAuthSignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = A19532BE139A88FC00E45591 /* GTMOAuthSignIn.m */; };
+		A19532C5139A88FC00E45591 /* GTMOAuthViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = A19532C0139A88FC00E45591 /* GTMOAuthViewControllerTouch.m */; };
+		A19532C6139A88FC00E45591 /* GTMOAuthViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = A19532C1139A88FC00E45591 /* GTMOAuthViewTouch.xib */; };
+		A19532C9139A89F300E45591 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19532C8139A89F300E45591 /* SystemConfiguration.framework */; };
+		A19532CB139A8A1700E45591 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19532CA139A8A1700E45591 /* Security.framework */; };
 		A1ACBD1013855C80003D2BF2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1ACBD0F13855C80003D2BF2 /* UIKit.framework */; };
 		A1ACBD1213855C80003D2BF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1ACBD1113855C80003D2BF2 /* Foundation.framework */; };
 		A1ACBD1413855C80003D2BF2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1ACBD1313855C80003D2BF2 /* CoreGraphics.framework */; };
@@ -18,13 +25,26 @@
 		A1ACBD2313855C80003D2BF2 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1ACBD2113855C80003D2BF2 /* MainWindow.xib */; };
 		A1ACBD2613855C80003D2BF2 /* GnomoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1ACBD2513855C80003D2BF2 /* GnomoViewController.m */; };
 		A1ACBD2913855C80003D2BF2 /* GnomoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1ACBD2713855C80003D2BF2 /* GnomoViewController.xib */; };
+		A1F401E1139BD1B20064C861 /* ServiceSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F401DF139BD1B20064C861 /* ServiceSettingViewController.m */; };
+		A1F401E2139BD1B20064C861 /* ServiceSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1F401E0139BD1B20064C861 /* ServiceSettingViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8A6A2F28138BA54800FBE0D4 /* OverlapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = OverlapViewController.h; sourceTree = "<group>"; };
+		8A6A2F28138BA54800FBE0D4 /* OverlapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlapViewController.h; sourceTree = "<group>"; };
 		8A6A2F29138BA54800FBE0D4 /* OverlapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlapViewController.m; sourceTree = "<group>"; };
 		8A6A2F2A138BA54800FBE0D4 /* RoundRectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundRectView.h; sourceTree = "<group>"; };
 		8A6A2F2B138BA54800FBE0D4 /* RoundRectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundRectView.m; sourceTree = "<group>"; };
+		A19532B9139A88FC00E45591 /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcher.h; sourceTree = "<group>"; };
+		A19532BA139A88FC00E45591 /* GTMHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcher.m; sourceTree = "<group>"; };
+		A19532BB139A88FC00E45591 /* GTMOAuthAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuthAuthentication.h; sourceTree = "<group>"; };
+		A19532BC139A88FC00E45591 /* GTMOAuthAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuthAuthentication.m; sourceTree = "<group>"; };
+		A19532BD139A88FC00E45591 /* GTMOAuthSignIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuthSignIn.h; sourceTree = "<group>"; };
+		A19532BE139A88FC00E45591 /* GTMOAuthSignIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuthSignIn.m; sourceTree = "<group>"; };
+		A19532BF139A88FC00E45591 /* GTMOAuthViewControllerTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuthViewControllerTouch.h; sourceTree = "<group>"; };
+		A19532C0139A88FC00E45591 /* GTMOAuthViewControllerTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuthViewControllerTouch.m; sourceTree = "<group>"; };
+		A19532C1139A88FC00E45591 /* GTMOAuthViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuthViewTouch.xib; sourceTree = "<group>"; };
+		A19532C8139A89F300E45591 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A19532CA139A8A1700E45591 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A1ACBD0B13855C80003D2BF2 /* Gnomo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gnomo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1ACBD0F13855C80003D2BF2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A1ACBD1113855C80003D2BF2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -39,6 +59,9 @@
 		A1ACBD2413855C80003D2BF2 /* GnomoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GnomoViewController.h; sourceTree = "<group>"; };
 		A1ACBD2513855C80003D2BF2 /* GnomoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GnomoViewController.m; sourceTree = "<group>"; };
 		A1ACBD2813855C80003D2BF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GnomoViewController.xib; sourceTree = "<group>"; };
+		A1F401DE139BD1B20064C861 /* ServiceSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceSettingViewController.h; sourceTree = "<group>"; };
+		A1F401DF139BD1B20064C861 /* ServiceSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceSettingViewController.m; sourceTree = "<group>"; };
+		A1F401E0139BD1B20064C861 /* ServiceSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServiceSettingViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,16 +72,35 @@
 				A1ACBD1013855C80003D2BF2 /* UIKit.framework in Frameworks */,
 				A1ACBD1213855C80003D2BF2 /* Foundation.framework in Frameworks */,
 				A1ACBD1413855C80003D2BF2 /* CoreGraphics.framework in Frameworks */,
+				A19532CB139A8A1700E45591 /* Security.framework in Frameworks */,
+				A19532C9139A89F300E45591 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A19532B8139A88FC00E45591 /* gtm-oauth */ = {
+			isa = PBXGroup;
+			children = (
+				A19532B9139A88FC00E45591 /* GTMHTTPFetcher.h */,
+				A19532BA139A88FC00E45591 /* GTMHTTPFetcher.m */,
+				A19532BB139A88FC00E45591 /* GTMOAuthAuthentication.h */,
+				A19532BC139A88FC00E45591 /* GTMOAuthAuthentication.m */,
+				A19532BD139A88FC00E45591 /* GTMOAuthSignIn.h */,
+				A19532BE139A88FC00E45591 /* GTMOAuthSignIn.m */,
+				A19532BF139A88FC00E45591 /* GTMOAuthViewControllerTouch.h */,
+				A19532C0139A88FC00E45591 /* GTMOAuthViewControllerTouch.m */,
+				A19532C1139A88FC00E45591 /* GTMOAuthViewTouch.xib */,
+			);
+			path = "gtm-oauth";
+			sourceTree = "<group>";
+		};
 		A1ACBD0013855C80003D2BF2 = {
 			isa = PBXGroup;
 			children = (
 				A1ACBD1513855C80003D2BF2 /* Gnomo */,
+				A19532B8139A88FC00E45591 /* gtm-oauth */,
 				A1ACBD0E13855C80003D2BF2 /* Frameworks */,
 				A1ACBD0C13855C80003D2BF2 /* Products */,
 			);
@@ -78,6 +120,8 @@
 				A1ACBD0F13855C80003D2BF2 /* UIKit.framework */,
 				A1ACBD1113855C80003D2BF2 /* Foundation.framework */,
 				A1ACBD1313855C80003D2BF2 /* CoreGraphics.framework */,
+				A19532CA139A8A1700E45591 /* Security.framework */,
+				A19532C8139A89F300E45591 /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -91,6 +135,9 @@
 				A1ACBD2413855C80003D2BF2 /* GnomoViewController.h */,
 				A1ACBD2513855C80003D2BF2 /* GnomoViewController.m */,
 				A1ACBD2713855C80003D2BF2 /* GnomoViewController.xib */,
+				A1F401DE139BD1B20064C861 /* ServiceSettingViewController.h */,
+				A1F401DF139BD1B20064C861 /* ServiceSettingViewController.m */,
+				A1F401E0139BD1B20064C861 /* ServiceSettingViewController.xib */,
 				8A6A2F2A138BA54800FBE0D4 /* RoundRectView.h */,
 				8A6A2F2B138BA54800FBE0D4 /* RoundRectView.m */,
 				8A6A2F28138BA54800FBE0D4 /* OverlapViewController.h */,
@@ -161,6 +208,8 @@
 				A1ACBD1A13855C80003D2BF2 /* InfoPlist.strings in Resources */,
 				A1ACBD2313855C80003D2BF2 /* MainWindow.xib in Resources */,
 				A1ACBD2913855C80003D2BF2 /* GnomoViewController.xib in Resources */,
+				A19532C6139A88FC00E45591 /* GTMOAuthViewTouch.xib in Resources */,
+				A1F401E2139BD1B20064C861 /* ServiceSettingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +225,11 @@
 				A1ACBD2613855C80003D2BF2 /* GnomoViewController.m in Sources */,
 				8A6A2F2C138BA54800FBE0D4 /* OverlapViewController.m in Sources */,
 				8A6A2F2D138BA54800FBE0D4 /* RoundRectView.m in Sources */,
+				A19532C2139A88FC00E45591 /* GTMHTTPFetcher.m in Sources */,
+				A19532C3139A88FC00E45591 /* GTMOAuthAuthentication.m in Sources */,
+				A19532C4139A88FC00E45591 /* GTMOAuthSignIn.m in Sources */,
+				A19532C5139A88FC00E45591 /* GTMOAuthViewControllerTouch.m in Sources */,
+				A1F401E1139BD1B20064C861 /* ServiceSettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

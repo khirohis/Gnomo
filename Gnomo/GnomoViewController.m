@@ -2,11 +2,12 @@
 //  GnomoViewController.m
 //  Gnomo
 //
-//  Created by 小林 博久 on 11/05/19.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by Hirohisa Kobayasi on 11/05/19.
+//  Copyright 2011 hogelab.net All rights reserved.
 //
 
 #import "GnomoViewController.h"
+#import "ServiceSettingViewController.h"
 
 
 @implementation GnomoViewController
@@ -37,6 +38,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+	[super viewDidAppear:animated];
+
+	ServiceSettingViewController *controller = [[[ServiceSettingViewController alloc] initWithNibName:@"ServiceSettingViewController" bundle:nil] autorelease];
+	[self presentModalViewController:controller animated:YES];
 }
 
 
