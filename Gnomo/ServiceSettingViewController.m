@@ -9,6 +9,7 @@
 #import "ServiceSettingViewController.h"
 #import "GTMOAuthAuthentication.h"
 #import "GTMOAuthViewControllerTouch.h"
+#import "GnomoOAuthSettings.h"
 
 
 enum {
@@ -188,35 +189,29 @@ enum {
 
 - (void)handleTwitterSetting
 {
-	NSString *consumerKey = @"kuma";
-	NSString *consumerSecret = @"kuma";
-
 	GTMOAuthAuthentication *auth;
 	auth = [[[GTMOAuthAuthentication alloc] initWithSignatureMethod:kGTMOAuthSignatureMethodHMAC_SHA1
-                                                        consumerKey:consumerKey
-                                                         privateKey:consumerSecret] autorelease];	
-	auth.serviceProvider = @"Twitter";
-	auth.callback = @"https://api.twitter.com/oauth/request_token";
+                                                        consumerKey:cTwitterConsumerKey
+                                                         privateKey:cTwitterConsumerSecret] autorelease];	
+	auth.serviceProvider = cTwitterServiceName;
+	auth.callback = cTwitterCallbackUrl;
 
 	NSURL *requestUrl = [NSURL URLWithString:@"https://api.twitter.com/oauth/request_token"];
 	NSURL *accessUrl = [NSURL URLWithString:@"https://api.twitter.com/oauth/access_token"];
 	NSURL *authorizeUrl = [NSURL URLWithString:@"https://api.twitter.com/oauth/authorize"];
-	NSString *scope = @"http://api.twitter.com/oauth/request_token";
+	NSString *scope = @"http://api.twitter.com/";
 
-    // Display the autentication view
-    GTMOAuthViewControllerTouch *vc = [[[GTMOAuthViewControllerTouch alloc]
-										initWithScope:scope
-										language:nil
-										requestTokenURL:requestUrl
-										authorizeTokenURL:authorizeUrl
-										accessTokenURL:accessUrl
-										authentication:auth
-										appServiceName:@"ROMTERRA"
-										delegate:self
-										finishedSelector:@selector(viewController:finishedWithAuth:error:)] autorelease];
+    GTMOAuthViewControllerTouch *vc = [[[GTMOAuthViewControllerTouch alloc] initWithScope:scope
+																				 language:nil
+																		  requestTokenURL:requestUrl
+																		authorizeTokenURL:authorizeUrl
+																		   accessTokenURL:accessUrl
+																		   authentication:auth
+																		   appServiceName:cTwitterApplicationName
+																				 delegate:self
+																		 finishedSelector:@selector(viewController:finishedWithAuth:error:)] autorelease];
 
     [self presentModalViewController:vc animated:YES];
-
 }
 
 - (void)viewController:(GTMOAuthViewControllerTouch *)viewController

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8A6A2F2C138BA54800FBE0D4 /* OverlapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A6A2F29138BA54800FBE0D4 /* OverlapViewController.m */; };
 		8A6A2F2D138BA54800FBE0D4 /* RoundRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A6A2F2B138BA54800FBE0D4 /* RoundRectView.m */; };
+		A112EB2C139D116D00AC1339 /* GnomoOAuthSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = A112EB2B139D116D00AC1339 /* GnomoOAuthSettings.m */; };
 		A19532C2139A88FC00E45591 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A19532BA139A88FC00E45591 /* GTMHTTPFetcher.m */; };
 		A19532C3139A88FC00E45591 /* GTMOAuthAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = A19532BC139A88FC00E45591 /* GTMOAuthAuthentication.m */; };
 		A19532C4139A88FC00E45591 /* GTMOAuthSignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = A19532BE139A88FC00E45591 /* GTMOAuthSignIn.m */; };
@@ -34,6 +35,8 @@
 		8A6A2F29138BA54800FBE0D4 /* OverlapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlapViewController.m; sourceTree = "<group>"; };
 		8A6A2F2A138BA54800FBE0D4 /* RoundRectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundRectView.h; sourceTree = "<group>"; };
 		8A6A2F2B138BA54800FBE0D4 /* RoundRectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundRectView.m; sourceTree = "<group>"; };
+		A112EB2A139D116D00AC1339 /* GnomoOAuthSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GnomoOAuthSettings.h; sourceTree = "<group>"; };
+		A112EB2B139D116D00AC1339 /* GnomoOAuthSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GnomoOAuthSettings.m; sourceTree = "<group>"; };
 		A19532B9139A88FC00E45591 /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcher.h; sourceTree = "<group>"; };
 		A19532BA139A88FC00E45591 /* GTMHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcher.m; sourceTree = "<group>"; };
 		A19532BB139A88FC00E45591 /* GTMOAuthAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuthAuthentication.h; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 		A1ACBD1513855C80003D2BF2 /* Gnomo */ = {
 			isa = PBXGroup;
 			children = (
+				A112EB2A139D116D00AC1339 /* GnomoOAuthSettings.h */,
+				A112EB2B139D116D00AC1339 /* GnomoOAuthSettings.m */,
 				A1ACBD1E13855C80003D2BF2 /* GnomoAppDelegate.h */,
 				A1ACBD1F13855C80003D2BF2 /* GnomoAppDelegate.m */,
 				A1ACBD2113855C80003D2BF2 /* MainWindow.xib */,
@@ -230,6 +235,7 @@
 				A19532C4139A88FC00E45591 /* GTMOAuthSignIn.m in Sources */,
 				A19532C5139A88FC00E45591 /* GTMOAuthViewControllerTouch.m in Sources */,
 				A1F401E1139BD1B20064C861 /* ServiceSettingViewController.m in Sources */,
+				A112EB2C139D116D00AC1339 /* GnomoOAuthSettings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
