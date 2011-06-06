@@ -1,0 +1,18 @@
+//
+//  GnomeOAuthSettings.m
+//  Gnomo
+//
+//  Created by Hirohisa Kobayasi on 11/06/06.
+//  Copyright 2011 hogelab.net All rights reserved.
+//
+
+
+//--------------------------------------------------
+// Twitter settings
+
+const NSString		*cTwitterServiceName		= @"Twitter";
+const NSString		*cTwitterApplicationName	= @"Your application's name";
+
+const NSString		*cTwitterConsumerKey		= @"Your application's consumer key";
+const NSString		*cTwitterConsumerSecret		= @"Your application's consumre secret";
+const NSString		*cTwitterCallbackUrl		= @"http://your.application.com/";
