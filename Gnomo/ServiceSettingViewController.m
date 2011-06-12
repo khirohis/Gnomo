@@ -9,6 +9,7 @@
 #import "ServiceSettingViewController.h"
 #import "GTMOAuthAuthentication.h"
 #import "GTMOAuthViewControllerTouch.h"
+#import "GnomoAuthenticationManager.h"
 #import "GnomoOAuthSettings.h"
 
 
@@ -189,12 +190,8 @@ enum {
 
 - (void)handleTwitterSetting
 {
-	GTMOAuthAuthentication *auth;
-	auth = [[[GTMOAuthAuthentication alloc] initWithSignatureMethod:kGTMOAuthSignatureMethodHMAC_SHA1
-                                                        consumerKey:cTwitterConsumerKey
-                                                         privateKey:cTwitterConsumerSecret] autorelease];	
-	auth.serviceProvider = cTwitterServiceName;
-	auth.callback = cTwitterCallbackUrl;
+	GnomoAuthenticationManager *manager = [GnomoAuthenticationManager sharedManager];
+	GTMOAuthAuthentication *auth = [manager twitterAuthentication];
 
 	NSURL *requestUrl = [NSURL URLWithString:@"https://api.twitter.com/oauth/request_token"];
 	NSURL *accessUrl = [NSURL URLWithString:@"https://api.twitter.com/oauth/access_token"];
