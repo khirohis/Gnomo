@@ -7,7 +7,14 @@
 //
 
 #import "GnomoViewController.h"
+#import "GTMOAuthViewControllerTouch.h"
+#import "GnomoAuthenticationManager.h"
 #import "ServiceSettingViewController.h"
+
+
+@interface GnomoViewController ()
+
+@end
 
 
 @implementation GnomoViewController
@@ -44,8 +51,16 @@
 {
 	[super viewDidAppear:animated];
 
-	ServiceSettingViewController *controller = [[[ServiceSettingViewController alloc] initWithNibName:@"ServiceSettingViewController" bundle:nil] autorelease];
-	[self presentModalViewController:controller animated:YES];
+	GnomoAuthenticationManager *manager = [GnomoAuthenticationManager sharedManager];
+	GTMOAuthAuthentication *auth = manager.twitterAuthentication;
+
+	BOOL isAuthenticated = [GTMOAuthViewControllerTouch authorizeFromKeychainForName:@"Gnomo"
+																	  authentication:auth];
+	if (!isAuthenticated) {
+		ServiceSettingViewController *controller = [[[ServiceSettingViewController alloc] initWithNibName:@"ServiceSettingViewController" bundle:nil] autorelease];
+		[self presentModalViewController:controller animated:YES];
+	} else {
+	}
 }
 
 
@@ -76,6 +91,5 @@
 
 	return YES;
 }
-
 
 @end

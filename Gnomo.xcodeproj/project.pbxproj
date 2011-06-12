@@ -17,6 +17,7 @@
 		A19532C6139A88FC00E45591 /* GTMOAuthViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = A19532C1139A88FC00E45591 /* GTMOAuthViewTouch.xib */; };
 		A19532C9139A89F300E45591 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19532C8139A89F300E45591 /* SystemConfiguration.framework */; };
 		A19532CB139A8A1700E45591 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19532CA139A8A1700E45591 /* Security.framework */; };
+		A19C049013A502760012A597 /* GnomoAuthenticationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A19C048F13A502760012A597 /* GnomoAuthenticationManager.m */; };
 		A1ACBD1013855C80003D2BF2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1ACBD0F13855C80003D2BF2 /* UIKit.framework */; };
 		A1ACBD1213855C80003D2BF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1ACBD1113855C80003D2BF2 /* Foundation.framework */; };
 		A1ACBD1413855C80003D2BF2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1ACBD1313855C80003D2BF2 /* CoreGraphics.framework */; };
@@ -48,6 +49,8 @@
 		A19532C1139A88FC00E45591 /* GTMOAuthViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuthViewTouch.xib; sourceTree = "<group>"; };
 		A19532C8139A89F300E45591 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A19532CA139A8A1700E45591 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A19C048E13A502760012A597 /* GnomoAuthenticationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GnomoAuthenticationManager.h; sourceTree = "<group>"; };
+		A19C048F13A502760012A597 /* GnomoAuthenticationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GnomoAuthenticationManager.m; sourceTree = "<group>"; };
 		A1ACBD0B13855C80003D2BF2 /* Gnomo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gnomo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1ACBD0F13855C80003D2BF2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A1ACBD1113855C80003D2BF2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -143,6 +146,8 @@
 				A1F401DE139BD1B20064C861 /* ServiceSettingViewController.h */,
 				A1F401DF139BD1B20064C861 /* ServiceSettingViewController.m */,
 				A1F401E0139BD1B20064C861 /* ServiceSettingViewController.xib */,
+				A19C048E13A502760012A597 /* GnomoAuthenticationManager.h */,
+				A19C048F13A502760012A597 /* GnomoAuthenticationManager.m */,
 				8A6A2F2A138BA54800FBE0D4 /* RoundRectView.h */,
 				8A6A2F2B138BA54800FBE0D4 /* RoundRectView.m */,
 				8A6A2F28138BA54800FBE0D4 /* OverlapViewController.h */,
@@ -236,6 +241,7 @@
 				A19532C5139A88FC00E45591 /* GTMOAuthViewControllerTouch.m in Sources */,
 				A1F401E1139BD1B20064C861 /* ServiceSettingViewController.m in Sources */,
 				A112EB2C139D116D00AC1339 /* GnomoOAuthSettings.m in Sources */,
+				A19C049013A502760012A597 /* GnomoAuthenticationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
