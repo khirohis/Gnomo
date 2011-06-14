@@ -7,10 +7,7 @@
 //
 
 #import "ServiceSettingViewController.h"
-#import "GTMOAuthAuthentication.h"
-#import "GTMOAuthViewControllerTouch.h"
 #import "GnomoAuthenticationManager.h"
-#import "GnomoOAuthSettings.h"
 
 
 enum {
@@ -21,16 +18,17 @@ enum {
 
 @interface ServiceSettingViewController ()
 
-- (void)handleTwitterSetting;
+@property (nonatomic, assign) BOOL		authenticatedTwitter;
 
-- (void)viewController:(GTMOAuthViewControllerTouch *)viewController
-      finishedWithAuth:(GTMOAuthAuthentication *)auth
-                 error:(NSError *)error;
+- (void)handleTwitterSetting;
 
 @end
 
 
 @implementation ServiceSettingViewController
+
+@synthesize authenticatedTwitter		= __authenticatedTwitter;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -48,10 +46,7 @@ enum {
 
 - (void)didReceiveMemoryWarning
 {
-    // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
@@ -60,18 +55,13 @@ enum {
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	GnomoAuthenticationManager *manager = [GnomoAuthenticationManager sharedManager];
+	self.authenticatedTwitter = [manager isAuthenticatedTwitter];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -138,44 +128,6 @@ enum {
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 
@@ -188,40 +140,25 @@ enum {
 	}
 }
 
+
+#pragma mark - GnomoAuthenticationManager delegate
+
+- (void)authenticateTwitterResult:(BOOL)result
+{
+	if (self.authenticatedTwitter != result) {
+		self.authenticatedTwitter = result;
+		[self.tableView reloadData];
+	}
+}
+
+
+#pragma mark - private methods
+
 - (void)handleTwitterSetting
 {
 	GnomoAuthenticationManager *manager = [GnomoAuthenticationManager sharedManager];
-	GTMOAuthAuthentication *auth = [manager twitterAuthentication];
-
-	NSURL *requestUrl = [NSURL URLWithString:@"https://api.twitter.com/oauth/request_token"];
-	NSURL *accessUrl = [NSURL URLWithString:@"https://api.twitter.com/oauth/access_token"];
-	NSURL *authorizeUrl = [NSURL URLWithString:@"https://api.twitter.com/oauth/authorize"];
-	NSString *scope = @"http://api.twitter.com/";
-
-    GTMOAuthViewControllerTouch *vc = [[[GTMOAuthViewControllerTouch alloc] initWithScope:scope
-																				 language:nil
-																		  requestTokenURL:requestUrl
-																		authorizeTokenURL:authorizeUrl
-																		   accessTokenURL:accessUrl
-																		   authentication:auth
-																		   appServiceName:cTwitterApplicationName
-																				 delegate:self
-																		 finishedSelector:@selector(viewController:finishedWithAuth:error:)] autorelease];
-
-    [self presentModalViewController:vc animated:YES];
+	[manager authenticateTwitter:self];
 }
 
-- (void)viewController:(GTMOAuthViewControllerTouch *)viewController
-      finishedWithAuth:(GTMOAuthAuthentication *)auth
-                 error:(NSError *)error
-{
-	if (error != nil) {
-		NSLog(@"Error:%@", [error description]);
-	} else {
-		NSLog(@"Success");
-	}
-
-	[self dismissModalViewControllerAnimated:YES];
-}
 
 @end

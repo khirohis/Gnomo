@@ -7,18 +7,33 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GTMOAuthAuthentication.h"
 
 
-@class GTMOAuthAuthentication;
+@protocol GnomoAuthenticationManagerDelegate <NSObject>
+
+@required
+- (void)authenticateTwitterResult:(BOOL)result;
+
+@end
+
 
 @interface GnomoAuthenticationManager : NSObject {
-	GTMOAuthAuthentication *	__twitterAuthentication;
+	UIViewController		*__parentView;
+	GTMOAuthAuthentication	*__twitterAuthentication;
+
+	id<GnomoAuthenticationManagerDelegate> __delegate;
 }
 
 @property (nonatomic, retain, readonly) GTMOAuthAuthentication *twitterAuthentication;
+@property (nonatomic, assign) id<GnomoAuthenticationManagerDelegate> delegate;
 
 
 + (GnomoAuthenticationManager *)sharedManager;
 
+- (BOOL)isAuthenticatedAnyService;
+- (BOOL)isAuthenticatedTwitter;
+
+- (void)authenticateTwitter:(UIViewController *)viewController;
 
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "GnomoViewController.h"
-#import "GTMOAuthViewControllerTouch.h"
 #import "GnomoAuthenticationManager.h"
 #import "ServiceSettingViewController.h"
 
@@ -52,14 +51,9 @@
 	[super viewDidAppear:animated];
 
 	GnomoAuthenticationManager *manager = [GnomoAuthenticationManager sharedManager];
-	GTMOAuthAuthentication *auth = manager.twitterAuthentication;
-
-	BOOL isAuthenticated = [GTMOAuthViewControllerTouch authorizeFromKeychainForName:@"Gnomo"
-																	  authentication:auth];
-	if (!isAuthenticated) {
+	if (![manager isAuthenticatedAnyService]) {
 		ServiceSettingViewController *controller = [[[ServiceSettingViewController alloc] initWithNibName:@"ServiceSettingViewController" bundle:nil] autorelease];
 		[self presentModalViewController:controller animated:YES];
-	} else {
 	}
 }
 
@@ -76,6 +70,18 @@
 
 
 #pragma mark - Action handling
+
+- (IBAction)handleSend:(id)sender
+{
+	NSLog(@"handleSend");
+
+	[self.tweetText resignFirstResponder];
+}
+
+- (IBAction)handleSetting:(id)sender
+{
+	NSLog(@"handleSetting");
+}
 
 - (IBAction)handleCloseButton:(id)sender
 {

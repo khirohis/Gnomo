@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GnomoAuthenticationManager.h"
 
 
-@interface ServiceSettingViewController : UITableViewController {
-    
+@interface ServiceSettingViewController : UITableViewController <GnomoAuthenticationManagerDelegate> {
+	BOOL			__authenticatedTwitter;
 }
 
 @end
