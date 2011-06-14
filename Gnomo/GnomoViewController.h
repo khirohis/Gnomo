@@ -19,6 +19,8 @@
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *closeButton;
 
 
+- (IBAction)handleSend:(id)sender;
+- (IBAction)handleSetting:(id)sender;
 - (IBAction)handleCloseButton:(id)sender;
 
 @end

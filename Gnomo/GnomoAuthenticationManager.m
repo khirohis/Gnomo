@@ -7,7 +7,7 @@
 //
 
 #import "GnomoAuthenticationManager.h"
-#import "GTMOAuthAuthentication.h"
+#import "GTMOAuthViewControllerTouch.h"
 #import "GnomoOAuthSettings.h"
 
 
@@ -16,6 +16,7 @@ static GnomoAuthenticationManager *sGnomoAuthenticationManager	= nil;
 
 @interface GnomoAuthenticationManager ()
 
+@property (nonatomic, retain) UIViewController *parentView;
 @property (nonatomic, retain, readwrite) GTMOAuthAuthentication *twitterAuthentication;
 
 - (GTMOAuthAuthentication *)createTwitterAuthentication;
@@ -25,7 +26,9 @@ static GnomoAuthenticationManager *sGnomoAuthenticationManager	= nil;
 
 @implementation GnomoAuthenticationManager
 
-@synthesize twitterAuthentication	= __twitterAuthentication;
+@synthesize parentView			= __parentView;
+@synthesize twitterAuthentication = __twitterAuthentication;
+@synthesize delegate			= __delegate;
 
 
 + (GnomoAuthenticationManager *)sharedManager
@@ -49,6 +52,7 @@ static GnomoAuthenticationManager *sGnomoAuthenticationManager	= nil;
 
 - (void)dealloc
 {
+	[__parentView release];
 	[__twitterAuthentication release];
 
 	[super dealloc];
@@ -65,6 +69,48 @@ static GnomoAuthenticationManager *sGnomoAuthenticationManager	= nil;
 }
 
 
+- (BOOL)isAuthenticatedAnyService
+{
+	if ([self isAuthenticatedTwitter]) {
+		return YES;
+	}
+
+	return NO;
+}
+
+- (BOOL)isAuthenticatedTwitter
+{
+	GTMOAuthAuthentication *auth = self.twitterAuthentication;
+	return [GTMOAuthViewControllerTouch authorizeFromKeychainForName:cTwitterApplicationName
+													  authentication:auth];
+}
+
+
+- (void)authenticateTwitter:(UIViewController *)viewController
+{
+	GnomoAuthenticationManager *manager = [GnomoAuthenticationManager sharedManager];
+	GTMOAuthAuthentication *auth = [manager twitterAuthentication];
+
+	NSURL *requestUrl = [NSURL URLWithString:@"https://api.twitter.com/oauth/request_token"];
+	NSURL *accessUrl = [NSURL URLWithString:@"https://api.twitter.com/oauth/access_token"];
+	NSURL *authorizeUrl = [NSURL URLWithString:@"https://api.twitter.com/oauth/authorize"];
+	NSString *scope = @"http://api.twitter.com/";
+
+    GTMOAuthViewControllerTouch *vc = [[[GTMOAuthViewControllerTouch alloc] initWithScope:scope
+																				 language:nil
+																		  requestTokenURL:requestUrl
+																		authorizeTokenURL:authorizeUrl
+																		   accessTokenURL:accessUrl
+																		   authentication:auth
+																		   appServiceName:cTwitterApplicationName
+																				 delegate:self
+																		 finishedSelector:@selector(viewController:finishedWithAuth:error:)] autorelease];
+
+	self.parentView = viewController;
+    [self.parentView presentModalViewController:vc animated:YES];
+}
+
+
 #pragma mark - private methods
 
 - (GTMOAuthAuthentication *)createTwitterAuthentication
@@ -76,6 +122,25 @@ static GnomoAuthenticationManager *sGnomoAuthenticationManager	= nil;
 	auth.callback = cTwitterCallbackUrl;
 
 	return auth;
+}
+
+
+- (void)viewController:(GTMOAuthViewControllerTouch *)viewController
+      finishedWithAuth:(GTMOAuthAuthentication *)auth
+                 error:(NSError *)error
+{
+	BOOL	result = YES;
+
+	if (error) {
+		NSLog(@"Error:%@", [error description]);
+		result = NO;
+	}
+
+	if ([self.delegate respondsToSelector:@selector(authenticateTwitterResult:)]) {
+		[self.delegate authenticateTwitterResult:result];
+	}
+
+	[self.parentView dismissModalViewControllerAnimated:YES];
 }
 
 
